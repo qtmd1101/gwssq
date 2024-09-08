@@ -18,5 +18,5 @@
 本接口只能中国大陆用户使用，港澳台及国外地区ip无法使用（攻击太多了，所以屏蔽了，如果很有需要可以专门给你的IP开放）<br>
 本接口只提供了1200条官网数据，需要全部数据请参考<a href="https://gwssq.com/DHLhtml/api/api.html">接入文档</a>免费获取全部数据权限
 <h2>贡献者名单</h2>
-开发者:孙顺江(我)
+开发者:孙顺江(我)<br>
 <a href="https://gwssq.com/DHLhtml/gxz/XQZJ.html">https://gwssq.com/DHLhtml/gxz/XQZJ.html</a>
