@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<style>
+  body {
+        background-size: cover;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;    
+      } 
+      #pass-container {
+      position: fixed;
+      top: 172px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+    }
+     /*下拉框*/
+    #result-container {
+      border: 0px solid gray;
+      border-top: none;
+      width: 43%;
+      max-height: 70vh;
+      overflow-y: auto;
+      display: none;
+      background-color: white;
+      position: fixed;
+      top: 217px;
+      left: 47%;
+      transform: translateX(-50%);
+      z-index: 998;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+    }
+    .item {
+display: flex; /* 添加这一行 */
+flex-wrap: wrap;
+align-items: center;
+padding: 8px;
+background-color: #fff;
+transition: background-color 0.2s;
+cursor: pointer;
+}
+
+.keyword {
+flex-shrink: 0; /* 添加这一行 /
+font-weight: normal; / 修改这一行 */
+}
+
+.highlight {
+font-weight: bold; /* 添加这一行 */
+}
+
+.description {
+margin-left: 12px;
+font-size: 14px;
+color: #666;
+}
+</style>
+     <style>
+/* 官网搜样式 */
+.xfxg {
+    width: 50%;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.xfxg.hidden {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+#pass {
+    flex: 1;
+    height: 50%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+#clear {
+    width: 48px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+}
+
+.button6 {
+    height: 44px;
+    padding: 0 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 13px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.button6:hover {
+    background-color: #0056b3;
+}
+
+.buttonbai {
+     height: 44px;
+    padding: 0 8px;
+    background-color: #b6d1ec;
+    border: none;
+    border-radius: 13px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+</style>
+</head>
+
+<body>
+    <h4>本接口只提供了1200条官网数据，需要全部数据请参考<a href="https://gwssq.com/DHLhtml/api/api.html">接入文档</a>免费获取全部数据权限</h4>
+   
+    <p>或直接使用<a href="https://gwssq.com/">官网搜索器</a></p>
+    
+                                      
+      <div id="pass-container" class="xfxg">
+        <input type="text" id="pass" placeholder="搜索官网(官网搜索器提供数据计算(gwssq.com)"
+         onkeydown="if(event.keyCode==13){check()}" autocomplete="off" maxlength="50">
+         <div id="clear">×</div>
+      <input type="button" value="开始" onclick="check()" style="height:44px" valign="middle" class="button6" id="btn">
+</div>
+<!--模糊搜索展示框-->
+<div id="result-container"></div>
+
+    <!--模糊搜索调用文件-->
+
+    <!--结果返回调用文件-->
+    <script src="js/soso.js"></script>
+     <script src="js/tpo.js"></script>
+
+
+
+ 
+</body>
+
+</html>
